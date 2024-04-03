@@ -26,7 +26,7 @@ class LoginForm extends Component {
   }
 
   onSubmitFailure = errorMsg => {
-    this.setState({showSubmitError: true, errorMsg})
+    this.setState({showSubmitError: true, error_msg})
   }
 
   submitForm = async event => {
