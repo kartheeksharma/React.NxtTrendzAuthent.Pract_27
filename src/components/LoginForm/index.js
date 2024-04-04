@@ -26,7 +26,7 @@ class LoginForm extends Component {
   }
 
   onSubmitFailure = errorMsg => {
-    this.setState({showSubmitError: true, error_msg})
+    this.setState({showSubmitError: true, errorMsg})
   }
 
   submitForm = async event => {
@@ -46,7 +46,7 @@ class LoginForm extends Component {
     if (response.ok === true) {
       this.onSubmitSuccess()
     } else {
-      this.onSubmitFailure(data.errorMsg)
+      this.onSubmitFailure(data..error_msg)
     }
   }
 
@@ -117,7 +117,7 @@ class LoginForm extends Component {
           </button>
           {showSubmitError && (
             <p className="error-message">
-              *username and password did not match{errorMsg}
+              *{errorMsg}
             </p>
           )}
         </form>
